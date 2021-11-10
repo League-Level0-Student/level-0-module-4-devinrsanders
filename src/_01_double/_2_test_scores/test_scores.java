@@ -7,10 +7,12 @@ public class test_scores {
 	public static void main(String[] args) {
 		
 		String answerString = JOptionPane.showInputDialog("What score did you get on your test?");
-		int answer = Integer.parseInt(answerString);
-		double answer;
-		Math.round(answer);
-		
+		double answer = Double.parseDouble(answerString);
+		if (answer > 80) {
+			JOptionPane.showMessageDialog(null, "Good Job!");
+		} else if (answer < 80) {
+			JOptionPane.showMessageDialog(null, "You need to work a little more.");
+		}
 		System.out.println(answer);	
 		
 

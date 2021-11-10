@@ -11,6 +11,26 @@ public class SleepyHead {
 
 		/************************  SLEEPY HEAD  **************************/
 		boolean isWeekend;
+		String weekend = JOptionPane.showInputDialog("What day of the week is it?");
+		
+		if (weekend.equals("monday")) {
+			JOptionPane.showInputDialog("Get ready for school!");
+		} else if (weekend.equals("tuesday")) {
+			JOptionPane.showInputDialog("Get ready for school");
+		} else if (weekend.equals("wednesday")) {
+			JOptionPane.showInputDialog("Get ready for school!");
+		} else if (weekend.equals("thursday")) {
+			JOptionPane.showInputDialog("Get ready for school!");
+		} else if (weekend.equals("friday")) {
+			JOptionPane.showInputDialog("Get ready for school!");
+		} else if (weekend.equals("saturday")) {
+			JOptionPane.showInputDialog("You can sleep in.");
+		} else if (weekend.equals("sunday")) {
+			JOptionPane.showInputDialog("You can sleep in.");
+		}
+	
+		
+	
 		// Write code to ask the user what day it is.
         
 		// Set the boolean isWeekend based on the value they enter
@@ -24,6 +44,14 @@ public class SleepyHead {
 		/************************   STAR STUDENT  **************************/
 
 		boolean passedExam;
+		String examString = JOptionPane.showInputDialog("What did you score on your exam?");
+        String exam = Integer.parseInt(examString);
+		if (exam > 70) {
+			JOptionPane.showMessageDialog(null, "You have passed");
+		} else if (exam < 70) {
+			JOptionPane.showMessageDialog(null, "Better luck next time.");
+		}
+		
 		// Write code to ask the user what percentage they scored in their last exam
 
 		
@@ -55,9 +83,10 @@ public class SleepyHead {
 		
 		boolean isRed;
 		// Ask the user what color to draw with. Based on their answer, set the isRed variable
+		String redString = JOptionPane.showInputDialog("What color would you like to draw with?");
 		
-		
-		boolean isSquare;		
+		boolean isSquare;
+		String squareString = JOptionPane.showInputDialog("What shape do you want to draw?");
 		// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
 		
 		
