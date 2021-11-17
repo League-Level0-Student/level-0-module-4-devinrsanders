@@ -45,10 +45,10 @@ public class SleepyHead {
 
 		boolean passedExam;
 		String examString = JOptionPane.showInputDialog("What did you score on your exam?");
-        String exam = Integer.parseInt(examString);
-		if (exam > 70) {
+		int exam = Integer.parseInt(examString);
+		if (exam > 80) {
 			JOptionPane.showMessageDialog(null, "You have passed");
-		} else if (exam < 70) {
+		} else if (exam < 80) {
 			JOptionPane.showMessageDialog(null, "Better luck next time.");
 		}
 		
@@ -70,9 +70,10 @@ public class SleepyHead {
 		while (!gameIsOver) {
 			// Ask the user if the game is over. 
 			String gameOver = JOptionPane.showInputDialog("is game over");
-			if (gameOver.equalsIgnoreCase("yes"))
+			if (gameOver.equalsIgnoreCase("yes")) {
 				gameIsOver = true;
-			
+			JOptionPane.showMessageDialog(null, "the game is over");
+			}
 			// If they answer "yes", change gameIsOver to true
 
 		}
@@ -81,12 +82,22 @@ public class SleepyHead {
 		
 		/***********************   RED SQUARE  ********************/
 		
-		boolean isRed;
+		
 		// Ask the user what color to draw with. Based on their answer, set the isRed variable
+		
 		String redString = JOptionPane.showInputDialog("What color would you like to draw with?");
 		
-		boolean isSquare;
-		String squareString = JOptionPane.showInputDialog("What shape do you want to draw?");
+	   
+		String shapeString = JOptionPane.showInputDialog("What shape do you want to draw?");
+		
+
+		if (redString == "red" && shapeString == "square") {
+			drawRedSquare();
+			}
+		
+	}
+		
+		
 		// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
 		
 		
@@ -96,11 +107,20 @@ public class SleepyHead {
 		// otherwise, tell the user you don't know how to draw that shape
 		
 
-	}
+	
 
 	
 	static void drawRedSquare() {
 		Robot rob = new Robot();
+		rob.setPenColor(0, 0, 255);
+		rob.penDown();
+		rob.move(50);
+		rob.turn(90);
+		rob.move(50);
+		rob.turn(90);
+		rob.move(50);
+		rob.turn(90);
+		rob.move(50);
 		// Complete the rest of this method
 	}	
 }
