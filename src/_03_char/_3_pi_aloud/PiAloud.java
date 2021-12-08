@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class PiAloud {
+	static void digits() {
 	/***********  SOUND ***************
 	 * Some computers are unable to play sounds. 
 	 * If you cannot play sound on this computer, set canPlaySounds to false.
@@ -12,6 +13,20 @@ public class PiAloud {
 	boolean canPlaySounds = true;
 	
 	
+	String pi = "3.1415926535897932384";
+	System.out.println(pi.charAt(0) + pi.charAt(1));
+	digits();
+	int x = 0;
+	int y = 0;
+	while(x < 20) {
+		System.out.println(pi.charAt(y));
+		x++;
+		y++;
+	}
+	}
+	
+
+
 	// 1. Make a main method and make sure your program can run
 
 	// 2. Make a String variable to hold 20 digits of Pi. You could use http://www.piday.org/million/ to get this.

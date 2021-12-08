@@ -1,10 +1,17 @@
 package _03_char._2_string_methods;
 
+import javax.swing.JOptionPane;
 
 public class StringMethods {
 	public static void main(String[] args) {
-		String name =
+		String name = "abc";
 		// 1. Create a String variable and initialize it to contain a minimum of 3 characters
+			System.out.println(name.charAt(0));
+			System.out.println(name.length());
+			String indexString = JOptionPane.showInputDialog(null,"What index are you searching"); 
+			int index = Integer.parseInt(indexString);
+		    System.out.println(name.charAt(index) + " is at index " + indexString);
+			
 
 		// 2. Print the 3rd char of your String to the console.
 		//    HINT: .charAt
@@ -25,6 +32,7 @@ public class StringMethods {
 		//             for char 'b', then print "b is at index 1"
 		
 	}
-}
+	}
+
 
 
